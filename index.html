@@ -1,11 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wahyu Assignment Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+        <center>
+            <h1>Welcome to Calculator</h1>
+            <section>
+                <p>Halo Sobat! Welcome to My Calculator</p>    
+                <p>Sebuah website apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
+            </section>
+        </center>
+    </header>
+
+    <section id="segitiga-content">
+        <div class="section-1">
+            <h3>Segitiga</h3>
+        </div>
+        <br>
+        <div class="button-content">
+            <button onclick="btnLS()">Luas Segitiga</button>
+            <button onclick="btnKS()">Keliling Segitiga</button>
+        </div>
+    </section>
+
+    <hr/>
     
+<!--- Konten Luas segitiga -->
+    <div id="btnLS" style="display: none;">
+    <section>
+        <section>
+            <div class="section-1">
+                <h2>Luas Segitiga</h2>
+            </div>
+            <div class="img-segitiga">
+                <img src="assets/rumus luas segitiga.PNG">
+            </div>
+            <p>Rumus Luas Segitiga yaitu :</p>
+                <h3><center>L = 1/2 x a x t</center></h3>
+                <p>Di mana :</p>
+                <p>L = Luas</p>
+                <p>a = Panjang Alas</p>
+                <p>t = Tinggi</p>
+        </section>
+        <hr/>
+        <section>
+            <header>
+                <h2><center>Hitung Luas Segitiga</center></h2>
+            </header>
+            <form>
+                <section>
+                    <div>
+                        <label>Alas :</label><input type="number" id="alas">
+                    </div>
+                    <div>
+                        <label>Tinggi :</label><input type="number" id="tinggi">
+                    </div>
+                </section><br>
+                <strong>
+                    Diketahui : ...
+                    <h3 id="rumus-1"></h3>
+                    <h3 id="rumus-2"></h3>
+                    <h3 id="hasil"></h3>
+                </strong> 
+                <br>
+                <button id="btn-hitung" type="button" onclick="hitungL()">Hitung</button>
+                <button id="btn-reset" type="button" onclick="resetL()">Reset</button> 
+            </form>
+        </section>
+    </section>
+</div>
+<!--- Akhir Konten Luas segitiga -->
+<!------------------------------------------------------------------------------------------------>
+<!--- Konten Keliling segitiga -->
+<div id="btnKS" style="display: none;">
+    <section>
+        <section>
+            <div class="section-1">
+                <h2>Keliling Segitiga</h2>
+            </div>
+            <div class="img-segitiga">
+                <img src="assets/rumus luas segitiga.PNG">
+            </div>
+            <p>Rumus Keliling Segitiga yaitu :</p>
+                <h3><center>K = S1 + S2 + S3</center></h3>
+                <p>Di mana :</p>
+                <p>K = Keliling</p>
+                <p>S1 = Sisi A</p>
+                <p>S2 = Sisi B</p>
+                <p>S3 = Sisi C</p>
+        </section>
+        <hr/>
+        <section>
+            <header>
+                <h2><center>Hitung Keliling Segitiga</center></h2>
+            </header>
+            <form>
+                <section>
+                    <div>
+                        <label>S1 :</label><input type="number" id="sisi1" >
+                    </div>
+                    <div>
+                        <label>S2 :</label><input type="number" id="sisi2" >
+                    </div>
+                    <div>
+                        <label>S3 :</label><input type="number" id="sisi3" >
+                    </div>
+                </section><br>
+                <strong>
+                    Diketahui : ...
+                    <h3 id="rumusK-1"></h3>
+                    <h3 id="rumusK-2"></h3>
+                    <h3 id="hasilK"></h3>
+                </strong> 
+                <button type="button" id="btn-hitung" onclick="hitungK()">Hitung</button>
+                <button type="button" id="btn-reset" onclick="resetK()">Reset</button> 
+            </form>
+        </section>
+    </section>
+</div>
+<!--- Akhir Konten Keliling segitiga -->
+
+    <script src="js/script.js"></script>
 </body>
 </html>
